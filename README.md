@@ -4,16 +4,35 @@ The UK COVID Status Check app is missing a feature - the ability to store the pe
 
 * Name
 * Date of birth
-* Number of doses
+* Number of vaccine doses
 * Type of vaccine (e.g. Pfizer, Moderna, AZ etc.)
-* Vaccine issued by (e.g. NHS Scotland)
+* Vaccine issuer (e.g. NHS Scotland)
+* COVID positivity status (not currently in use in the UK).
 
 <!--This app has been tested with the NHS Scotland COVID Pass Verifier and NHS Scotland COVID Status apps.-->
 
-## Installation
+# How to run
+
+This app is in early development. Basic QR data can be read - here are the steps:
+
+1. Place a COVID status QR code into the `src/example-files/` directory.
+1. Run `npm i` in the `src/` directory.
+1. Run `node src/index.js` in the project root.
+
+The output will be logged to the console.
+
+## Prerequesites
+
+* Node version >= 12
+
+## Reasons to gather QR Data
+
+The QR data often contains personal information on consumers. This information can be:
+
+* **Sold to third parties** for advertisement purposes;
+* **Combined with other data** to improve the data stored in a database by adding data previously not stored (e.g. if an establishment runs a Guestlist entry service, or online mailing list). It will now be possible to add date of birth, vaccine, and COVID status data to your lists.
+* **Stored more centrally** and combined with data from organisations (run by the same legal entity or otherwise) to enforce a two-tier society.
 
 ## License
 
 MIT
-
-## Disclaimer
