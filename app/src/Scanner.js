@@ -26,9 +26,6 @@ class Scanner extends Component {
       const passDataFinal = passData[0].get(-260).get(1);
 
       console.log(passDataFinal);
-      alert(
-        `${passDataFinal.nam.gn}${passDataFinal.nam.fn} - DOB: ${passDataFinal.dob}`
-      );
       this.setState({
         result: passDataFinal,
       });
