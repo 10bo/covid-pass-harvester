@@ -26,6 +26,7 @@ The QR data often contains personal information on consumers. With this informat
 * **Sold to third parties** for advertisement purposes.
 * **Used to build a profile on individual consumers**. This will improve the data stored in an establishment's database by adding data previously not stored (e.g. if an establishment runs a Guestlist entry service or online mailing list, it will now be possible to add date of birth, vaccine, and COVID positivity status data).
 * **Stored more centrally** and combined with data from organisations (run by the same entity or otherwise).
+* **Used to prevent crime** by storing the personal details & time of entry of visitors and providing this information to law enforcement.
 
 
 ## How To Run the App
