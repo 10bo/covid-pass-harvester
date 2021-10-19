@@ -11,7 +11,7 @@ The UK COVID Status Check app is missing a feature - the ability to store the pe
 
 <!--This app has been tested with the NHS Scotland COVID Pass Verifier and NHS Scotland COVID Status apps.-->
 
-# How to run
+## How to run
 
 This app is in early development. Basic QR data can be read - here are the steps:
 
