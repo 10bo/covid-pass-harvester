@@ -16,7 +16,7 @@ The UK COVID Status Check app is missing a feature - the ability to store the pe
 The QR data often contains personal information on consumers. This information can be:
 
 * **Sold to third parties** for advertisement purposes;
-* **Combined with other data** to improve the data stored in a database by adding data previously not stored (e.g. if an establishment runs a Guestlist entry service, or online mailing list). It will now be possible to add date of birth, vaccine, and COVID status data to your lists.
+* **Combined with other data** to improve the data stored in a database by adding data previously not stored (e.g. if an establishment runs a Guestlist entry service, or online mailing list). It will now be possible to add date of birth, vaccine, and COVID status data to your lists; or
 * **Stored more centrally** and combined with data from organisations (run by the same legal entity or otherwise) to enforce a two-tier society.
 
 
