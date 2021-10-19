@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --global user.name 'tsdir'
           git config --global user.email 'callum@theservicedirectory.co.uk'
-          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_PAT@github.com/10bo/monorepo
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_PAT@github.com/10bo/covid-pass-harvester
         env:
           GITHUB_ACTOR: 10bo
           GITHUB_PAT: ${{secrets.PAT}}
@@ -48,7 +48,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com/"
 
       - name: Build
-        run: cd app && npm run build
+        run: cd app && npm run build && cd ../
 
       - name: Set up SSH
         run: |
