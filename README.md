@@ -41,12 +41,14 @@ The output will be logged to the console.
 
 * ✅ Implement ability to read QR code
 * ✅ Implement decoding of QR code data to a JSON object
+* ⏳ New project logo.
 * ⏳ Create admin web interface.
-* ⏳ Implement ability to continuously scan QR code on client-side web app.
-* ⏳ Implement client COVID status indication on web UI.
-* ⏳ Implement server API endpoint which will accept QR data.
-* ⏳ Implement ability for server to send result to database (MySQL or SQLite).
-* ⏳ Implement export to CSV & client-side filter.
+* Implement ability to continuously scan QR code on client-side web app.
+* Implement client COVID status indication on web UI.
+* Implement server API endpoint which will accept QR data.
+* Implement ability for server to send result to database (MySQL or SQLite).
+* Improve popularity the project (social media etc.) and highlight benefits to businesses.
+* Implement export to CSV & client-side filter.
 
 ## License
 
