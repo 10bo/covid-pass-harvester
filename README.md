@@ -39,7 +39,7 @@ The QR data often contains personal information on consumers. With this informat
 
 ## Prerequisites
 
-* Node version >= 12
+* Node version >= 16
 
 ## To-do
 
