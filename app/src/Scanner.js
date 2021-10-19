@@ -36,8 +36,8 @@ class Scanner extends Component {
   }
   render() {
     const previewStyle = {
-      height: '100%',
-      width: '100%'
+      height: "100%",
+      width: "100%",
     };
 
     const isFullyVaccinated = this.state.result
@@ -55,13 +55,15 @@ class Scanner extends Component {
           showViewFinder={false}
         />
         <p
-          style={
-            this.state.result
+          style={{
+            ...(this.state.result
               ? isFullyVaccinated
                 ? { color: "rgb(39, 155, 23)" }
                 : { color: "rgb(196, 23, 23)" }
-              : {}
-          }
+              : {}),
+            padding: "10px",
+            backgroundColor: "#ddd",
+          }}
         >
           {this.state.result ? (
             <React.Fragment>
