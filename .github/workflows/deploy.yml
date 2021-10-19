@@ -1,0 +1,72 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  # release:
+  # types: [created]
+  # branches: [master]
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize, closed]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [16.x]
+    # if: github.event.action != 'closed'
+    if: github.event.action == 'closed' && github.event.pull_request.merged
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{secrets.PAT}}
+
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name 'tsdir'
+          git config --global user.email 'callum@theservicedirectory.co.uk'
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_PAT@github.com/10bo/monorepo
+        env:
+          GITHUB_ACTOR: 10bo
+          GITHUB_PAT: ${{secrets.PAT}}
+
+      - name: Checkout and pull branch
+        run: git fetch && git checkout master && git pull
+
+      - name: Install Packages
+        run: yarn install
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+          registry-url: "https://npm.pkg.github.com/"
+
+      - name: Build
+        run: cd app && npm run build
+  
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          chmod 700 ~/.ssh/
+          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          touch ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+          ssh-keyscan ${SSH_HOST} >> ~/.ssh/known_hosts
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+
+      - name: Transfer files
+        run: |
+          cd ./app/ && \
+          scp -i ~/.ssh/id_rsa -r ./build/* ${secrets.SSH_USER}@${SSH_HOST}:/var/home/thankyou/covidpass.tennant.io && \
+          cd ../
+        env:
+          SSH_HOST: ${{secrets.SSH_HOST}}
