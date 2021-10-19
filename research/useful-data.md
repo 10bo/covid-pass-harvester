@@ -1,5 +1,10 @@
-# Useful Data
+# Useful links
 
-These links were discovered after decompiling the NHS Scotland COVID Check app (http://www.javadecompilers.com).
+* https://github.com/eu-digital-green-certificates
+* https://stage.covid-status.service.nhsx.nhs.uk/eudcc/SubjectPublicKeyInfo
+* https://storenesturasvaxdev.blob.core.windows.net/certskey/testPublicKey.json
 
-* *resources/assets/appsettings.Production.json*: https://pk-prd.covidstatus.nhs.scot/publickeyprd/
+* Dummy greenpass for testing: https://gir.st/blog/img/greenpass-demo.png
+* Official data for testing: https://github.com/eu-digital-green-certificates/dgc-testdata/tree/main/IT/png
+* Documentation on json fields: https://ec.europa.eu/health/sites/default/files/ehealth/docs/digital-green-certificates_dt-specifications_en.pdf
+* Databases for decoding fields values: https://github.com/ehn-dcc-development/ehn-dcc-schema/tree/release/1.3.0/valuesets
