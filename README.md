@@ -30,7 +30,7 @@ This app is in early development. Basic QR data can be read - here are the steps
 
 The output will be logged to the console.
 
-## Prerequesites
+## Prerequisites
 
 * Node version >= 12
 
