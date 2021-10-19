@@ -36,8 +36,8 @@ class Scanner extends Component {
   }
   render() {
     const previewStyle = {
-      height: 320,
-      width: 320,
+      height: 500,
+      width: 500
     };
 
     const isFullyVaccinated = this.state.result
