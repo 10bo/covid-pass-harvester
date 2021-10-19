@@ -21,7 +21,7 @@ class Scanner extends Component {
       const decodedData = base45.decode(body);
       const output = pako.inflate(decodedData);
       const results = cbor.decodeAllSync(output);
-      const [headers1, headers2, cbor_data, signature] = results[0].value;
+      const [,, cbor_data] = results[0].value;
       const passData = cbor.decodeAllSync(cbor_data);
       const passDataFinal = passData[0].get(-260).get(1);
 
