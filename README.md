@@ -14,7 +14,7 @@ The UK COVID Status Check app is missing a feature - the ability to store the pe
 
 **COVID QR passes are now required by law for entry to some establishments in areas of the UK. This now means that consumers are less likely to be reluctant to provide personal details to establishments who would otherwise not have access to this information.**
 
-## Reasons to Collcet and Process QR Data
+## Reasons to Collect and Process QR Data
 
 The QR data often contains personal information on consumers. With this information, it can be:
 
