@@ -48,7 +48,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com/"
 
       - name: Build
-        run: cd app && npm run build
+        run: cd app && npm run build && cd ../
 
       - name: Set up SSH
         run: |
