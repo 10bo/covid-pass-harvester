@@ -22,7 +22,7 @@ The QR data often contains personal information on consumers. This information c
 
 ## How to run
 
-This app is in early development. Basic QR data can be read - here are the steps:
+Currently, QR data can be read but not stored - here are the steps:
 
 1. Place a COVID status QR code into the `src/example-files/` directory.
 1. Run `npm i` in the `src/` directory.
@@ -34,6 +34,17 @@ The output will be logged to the console.
 
 * Node version >= 12
 
+## To-do
+
+* ✅ Implement ability to read QR code
+* ✅ Implement decoding of QR code data to a JSON object
+* ⏳ Create admin web interface.
+* ⏳ Implement ability to continuously scan QR code on client-side web app.
+* ⏳ Implement client COVID status indication on web UI.
+* ⏳ Implement server API endpoint which will accept QR data.
+* ⏳ Implement ability for server to send result to database (MySQL or SQLite).
+* ⏳ Implement export to CSV & client-side filter.
+
 ## License
 
-MIT
+<a href="https://mit-license.org/">MIT</a>
