@@ -15,6 +15,10 @@ The UK COVID Status Check app is missing a feature - the ability to store the pe
 
 **COVID QR passes are now required by law for entry to some establishments in areas of the UK. This now means that consumers are less likely to be reluctant to provide personal details to establishments who would otherwise not have access to this information.**
 
+## Latest Release
+
+Click here to use the latest version of the app: https://covidpass.tennant.io/
+
 ## Reasons to Collect and Process QR Data
 
 The QR data often contains personal information on consumers. With this information, it can be:
@@ -44,6 +48,7 @@ The QR data often contains personal information on consumers. With this informat
 * ✅ Implement ability to continuously scan QR code on client-side web app.
 * ⏳ Implement client COVID status indication on web UI.
 * ⏳ Create admin web interface.
+* Move app to `glasgow.cloud` domain.
 * Implement server API endpoint which will accept QR data.
 * Implement ability for server to send result to database (MySQL or SQLite).
 * Improve popularity the project (social media etc.) and highlight benefits to businesses.
