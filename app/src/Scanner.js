@@ -21,7 +21,7 @@ class Scanner extends Component {
       const decodedData = base45.decode(body);
       const output = pako.inflate(decodedData);
       const results = cbor.decodeAllSync(output);
-      const [,, cbor_data] = results[0].value;
+      const [, , cbor_data] = results[0].value;
       const passData = cbor.decodeAllSync(cbor_data);
       const passDataFinal = passData[0].get(-260).get(1);
 
@@ -36,9 +36,13 @@ class Scanner extends Component {
   }
   render() {
     const previewStyle = {
-      height: 240,
+      height: 320,
       width: 320,
     };
+
+    const isFullyVaccinated = this.state.result
+      ? this.state.result.v.length === this.state.result.v[0].sd
+      : null;
 
     return (
       <div>
@@ -47,8 +51,18 @@ class Scanner extends Component {
           style={previewStyle}
           onError={this.handleError}
           onScan={this.handleScan}
+          facingMode={"environment"}
+          showViewFinder={false}
         />
-        <p>
+        <p
+          style={
+            this.state.result
+              ? isFullyVaccinated
+                ? { color: "rgb(39, 155, 23)" }
+                : { color: "rgb(196, 23, 23)" }
+              : {}
+          }
+        >
           {this.state.result ? (
             <React.Fragment>
               Name: {this.state.result.nam.gn + this.state.result.nam.fn}
