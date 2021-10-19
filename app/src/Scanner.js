@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import QrReader from "react-qr-scanner";
+import QrReader from "react-web-qr-reader";
 const base45 = require("base45");
 const cbor = require("cbor");
 const pako = require("pako");
@@ -17,7 +17,7 @@ class Scanner extends Component {
 
   handleScan(data) {
     if (data) {
-      const body = data.text.substr(4);
+      const body = data.data.substr(4);
       const decodedData = base45.decode(body);
       const output = pako.inflate(decodedData);
       const results = cbor.decodeAllSync(output);
