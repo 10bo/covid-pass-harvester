@@ -38,12 +38,12 @@ The QR data often contains personal information on consumers. With this informat
 
 ## To-do
 
-* ✅ Implement ability to read QR code
-* ✅ Implement decoding of QR code data to a JSON object
-* ⏳ New project logo.
-* ⏳ Create admin web interface.
+* ✅ Implement ability to read QR code.
+* ✅ Implement decoding of QR code data to a JSON object.
+* ✅ New project logo.
 * ✅ Implement ability to continuously scan QR code on client-side web app.
-* Implement client COVID status indication on web UI.
+* ⏳ Implement client COVID status indication on web UI.
+* ⏳ Create admin web interface.
 * Implement server API endpoint which will accept QR data.
 * Implement ability for server to send result to database (MySQL or SQLite).
 * Improve popularity the project (social media etc.) and highlight benefits to businesses.
