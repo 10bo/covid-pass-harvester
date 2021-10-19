@@ -66,7 +66,7 @@ jobs:
       - name: Transfer files
         run: |
           cd ./app/ && \
-          scp -i ~/.ssh/id_rsa -r ./build/* ${SSH_USER}@${secrets.SSH_HOST}:/var/home/thankyou/covidpass.tennant.io && \
+          scp -i ~/.ssh/id_rsa -r ./build/* ${SSH_USER}@${SSH_HOST}:/var/home/thankyou/covidpass.tennant.io && \
           cd ../
         env:
           SSH_HOST: ${{secrets.SSH_HOST}}
