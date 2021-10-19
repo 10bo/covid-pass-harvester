@@ -1,4 +1,5 @@
-# ![COVID Pass Data Harvester](https://github.com/10bo/covid-pass-harvester/blob/master/logo.jpg)
+# <img alt="COVID Pass Data Harvester" src="./logo.jpg" height="120">
+<!-- # ![COVID Pass Data Harvester](./logo.jpg) -->
 
 The UK COVID Status Check app is missing a feature - the ability to store the personal data contained in the QR code for a later date. This application provides establishments across the UK with an incredibly easy-to-use interface for viewing and exporting, en masse, personal QR code data such as:
 
